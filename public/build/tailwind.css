@@ -418,8 +418,17 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+.mr-1{
+  margin-right: 0.25rem;
+}
 .mt-11{
   margin-top: 2.75rem;
+}
+.mr-2{
+  margin-right: 0.5rem;
 }
 .block{
   display: block;
@@ -427,17 +436,38 @@ video {
 .flex{
   display: flex;
 }
+.h-5{
+  height: 1.25rem;
+}
 .h-8{
   height: 2rem;
 }
+.h-6{
+  height: 1.5rem;
+}
+.w-5{
+  width: 1.25rem;
+}
 .w-8{
   width: 2rem;
+}
+.w-1\/2{
+  width: 50%;
+}
+.w-6{
+  width: 1.5rem;
+}
+.flex-1{
+  flex: 1 1 0%;
 }
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .items-center{
   align-items: center;
+}
+.justify-start{
+  justify-content: flex-start;
 }
 .justify-center{
   justify-content: center;
@@ -456,9 +486,16 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 249 / var(--tw-bg-opacity));
 }
+.p-2{
+  padding: 0.5rem;
+}
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xl{
   font-size: 1.25rem;
@@ -467,17 +504,29 @@ video {
 .font-bold{
   font-weight: 700;
 }
+.font-medium{
+  font-weight: 500;
+}
+.text-orange-600{
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
 .text-slate-800{
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 @media (min-width: 768px){
   .md\:hidden{
