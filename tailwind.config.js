@@ -6,6 +6,9 @@ module.exports = {
       fontSize: {
         xxs: "0.7rem",
       },
+      padding: {
+        1.8: "0.45rem",
+      },
       height: {
         30: "7.5rem",
       },
