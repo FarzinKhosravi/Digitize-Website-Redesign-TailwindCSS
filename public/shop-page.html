@@ -151,14 +151,16 @@
       </nav>
     </header>
     <!-- Content -->
-    <main class="grid grid-cols-12">
+    <main class="grid grid-cols-12 md:px-4">
       <!-- Category - Filter Section (Web) -->
       <section class="col-span-3 hidden md:block">
         <div>sidebar</div>
       </section>
 
       <!-- Sort Section (Web) -->
-      <section class="col-span-9 hidden rounded-md bg-stone-50 md:block">
+      <section
+        class="col-span-9 mb-7 hidden rounded-md bg-stone-50 md:block md:max-w-screen-md"
+      >
         <div class="p-2">
           <ul class="flex items-center justify-start gap-x-4">
             <li class="rounded-md bg-orange-100 p-2">
@@ -202,10 +204,12 @@
       </section>
 
       <!-- Products Section -->
-      <section class="col-span-12 md:col-span-9 md:col-start-4">
+      <section
+        class="col-span-12 md:col-span-9 md:col-start-4 md:max-w-screen-md"
+      >
         <!-- Products Box -->
         <div
-          class="mx-auto grid grid-cols-2 gap-x-3 gap-y-8 p-4 sm:max-w-screen-sm lg:grid-cols-3 xl:grid-cols-4"
+          class="mx-auto grid grid-cols-2 gap-x-3 gap-y-8 p-4 sm:max-w-screen-sm md:max-w-screen-md md:p-0 lg:grid-cols-3 xl:grid-cols-4"
         >
           <!-- Product Box -->
           <div
