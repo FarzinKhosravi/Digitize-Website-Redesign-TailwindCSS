@@ -142,7 +142,7 @@
           </div>
           <div class="mr-1 w-full">
             <input
-              class="block w-full bg-transparent px-2 focus:outline-none"
+              class="block w-full border-0 bg-transparent px-2 focus:outline-none focus:ring-0"
               type="text"
               placeholder="جستجوی نام محصول،نام برند، نام مدل و..."
             />
@@ -271,10 +271,11 @@
             <h2 class="mb-5 text-xl font-bold text-orange-600">فیلتر</h2>
             <div>
               <!-- Accordion Menu NO.1 -->
-              <div class="mb-7">
+              <div x-data="{brand:false}" class="mb-7">
                 <!-- Accordion Header -->
                 <div
-                  class="mb-5 flex cursor-pointer items-center justify-between py-2 hover:rounded hover:bg-slate-200"
+                  @click="brand = !brand"
+                  class="mb-5 flex cursor-pointer items-center justify-between px-1 py-2 hover:rounded hover:bg-slate-200"
                 >
                   <div class="flex items-center">
                     <span>
@@ -319,7 +320,8 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        class="h-5 w-5"
+                        :class="brand ? 'rotate-180' : ''"
+                        class="h-5 w-5 transition-all duration-500"
                       >
                         <path
                           fill-rule="evenodd"
@@ -331,7 +333,7 @@
                   </div>
                 </div>
                 <!-- Accordion Content -->
-                <div>
+                <div x-show="brand" class="px-1">
                   <ul class="flex flex-col gap-y-2">
                     <li>
                       <label
@@ -382,10 +384,11 @@
                 </div>
               </div>
               <!-- Accordion Menu NO.2 -->
-              <div class="mb-7">
+              <div x-data="{color:false}" class="mb-7">
                 <!-- Accordion Header -->
                 <div
-                  class="mb-5 flex cursor-pointer items-center justify-between py-2 hover:rounded hover:bg-slate-200"
+                  @click="color=!color"
+                  class="mb-5 flex cursor-pointer items-center justify-between px-1 py-2 hover:rounded hover:bg-slate-200"
                 >
                   <div class="flex items-center">
                     <span>
@@ -435,7 +438,8 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        class="h-5 w-5"
+                        :class="color ? 'rotate-180' :''"
+                        class="h-5 w-5 transition-all duration-500"
                       >
                         <path
                           fill-rule="evenodd"
@@ -447,7 +451,7 @@
                   </div>
                 </div>
                 <!-- Accordion Content -->
-                <div>
+                <div x-show="color" class="px-1">
                   <ul class="flex flex-col gap-y-2">
                     <li>
                       <label
@@ -498,10 +502,11 @@
                 </div>
               </div>
               <!-- Accordion Menu NO.3 -->
-              <div>
+              <div x-data="{price:false}">
                 <!-- Accordion Header -->
                 <div
-                  class="mb-5 flex cursor-pointer items-center justify-between py-2 hover:rounded hover:bg-slate-200"
+                  @click="price=!price"
+                  class="mb-5 flex cursor-pointer items-center justify-between px-1 py-2 hover:rounded hover:bg-slate-200"
                 >
                   <div class="flex items-center">
                     <span>
@@ -544,7 +549,8 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        class="h-5 w-5"
+                        :class="price ? 'rotate-180' : ''"
+                        class="h-5 w-5 transition-all duration-500"
                       >
                         <path
                           fill-rule="evenodd"
@@ -556,7 +562,7 @@
                   </div>
                 </div>
                 <!-- Accordion Content -->
-                <div>content NO.3</div>
+                <div x-show="price" class="px-1">content NO.3</div>
               </div>
             </div>
           </div>
@@ -928,5 +934,8 @@
         </div>
       </section>
     </main>
+
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
   </body>
 </html>
