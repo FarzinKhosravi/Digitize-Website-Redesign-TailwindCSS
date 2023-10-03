@@ -731,6 +731,9 @@ select{
 .mt-11{
   margin-top: 2.75rem;
 }
+.mr-3{
+  margin-right: 0.75rem;
+}
 .block{
   display: block;
 }
@@ -888,6 +891,14 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
+.bg-red-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+.bg-blue-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
 .p-1{
   padding: 0.25rem;
 }
@@ -918,6 +929,18 @@ select{
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .pb-2{
   padding-bottom: 0.5rem;
