@@ -3,6 +3,9 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+      inset: {
+        38: "152px",
+      },
       fontSize: {
         xxs: "0.7rem",
       },
