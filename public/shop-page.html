@@ -93,9 +93,11 @@
     </section>
     <!-- Header Section (Web) -->
     <header
-      class="mb-8 hidden h-30 items-center bg-stone-50 px-4 shadow-[0_4px_14px_0_rgba(0,0,0,0.08)] md:flex"
+      class="sticky inset-x-0 top-0 z-30 mb-8 hidden h-30 items-center bg-stone-50 shadow-[0_4px_14px_0_rgba(0,0,0,0.08)] md:flex"
     >
-      <nav class="flex w-full items-center justify-between">
+      <nav
+        class="flex w-full items-center justify-between px-4 2xl:mx-auto 2xl:max-w-screen-2xl"
+      >
         <!-- Navigation Bar -->
         <ul class="flex items-center justify-between gap-x-1 xl:gap-x-3">
           <li>
@@ -166,7 +168,7 @@
     </header>
     <!-- Content -->
     <main
-      class="grid grid-cols-12 md:grid-rows-[80px_minmax(500px,_1fr)] md:gap-x-2 md:px-4"
+      class="grid grid-cols-12 md:grid-rows-[80px_minmax(500px,_1fr)] md:gap-x-2 md:px-4 2xl:mx-auto 2xl:max-w-screen-2xl"
     >
       <!-- Category - Filter Section (Web) -->
       <section class="col-span-4 hidden md:block lg:col-span-3 xl:col-span-2">
