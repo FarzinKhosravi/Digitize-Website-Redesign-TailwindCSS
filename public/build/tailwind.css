@@ -710,6 +710,9 @@ select{
 .-ml-1{
   margin-left: -0.25rem;
 }
+.-mr-2{
+  margin-right: -0.5rem;
+}
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -763,6 +766,9 @@ select{
 }
 .mt-11{
   margin-top: 2.75rem;
+}
+.-mr-1{
+  margin-right: -0.25rem;
 }
 .block{
   display: block;
@@ -976,17 +982,14 @@ select{
 .pb-2{
   padding-bottom: 0.5rem;
 }
-.pl-5{
-  padding-left: 1.25rem;
-}
-.pr-4{
-  padding-right: 1rem;
-}
 .pl-4{
   padding-left: 1rem;
 }
 .pl-4\.5{
   padding-left: 18px;
+}
+.pr-4{
+  padding-right: 1rem;
 }
 .text-left{
   text-align: left;
@@ -994,9 +997,9 @@ select{
 .text-center{
   text-align: center;
 }
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-base{
   font-size: 1rem;
@@ -1020,17 +1023,6 @@ select{
 }
 .text-xxs{
   font-size: 0.7rem;
-}
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-.font-black{
-  font-weight: 900;
 }
 .font-bold{
   font-weight: 700;
@@ -1208,6 +1200,9 @@ select{
   .xl\:col-start-3{
     grid-column-start: 3;
   }
+  .xl\:-mr-2{
+    margin-right: -0.5rem;
+  }
   .xl\:block{
     display: block;
   }
@@ -1221,6 +1216,14 @@ select{
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
+  .xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .xl\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
   .xl\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1229,9 +1232,8 @@ select{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  .xl\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .xl\:font-black{
+    font-weight: 900;
   }
   .xl\:font-bold{
     font-weight: 700;
@@ -1241,9 +1243,6 @@ select{
   }
   .xl\:font-semibold{
     font-weight: 600;
-  }
-  .xl\:font-black{
-    font-weight: 900;
   }
   .xl\:placeholder\:text-lg::-moz-placeholder{
     font-size: 1.125rem;
