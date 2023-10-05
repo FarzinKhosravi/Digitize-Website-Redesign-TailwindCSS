@@ -657,6 +657,9 @@ select{
   border-color: transparent;
   background-color: currentColor;
 }
+.fixed{
+  position: fixed;
+}
 .relative{
   position: relative;
 }
@@ -666,6 +669,9 @@ select{
 .inset-x-0{
   left: 0px;
   right: 0px;
+}
+.bottom-0{
+  bottom: 0px;
 }
 .top-0{
   top: 0px;
@@ -681,6 +687,9 @@ select{
 }
 .z-30{
   z-index: 30;
+}
+.z-40{
+  z-index: 40;
 }
 .col-span-12{
   grid-column: span 12 / span 12;

@@ -36,6 +36,7 @@
         </div>
       </div>
     </header>
+
     <!-- Sort-Filter Section (Mobile) -->
     <section class="mb-9 bg-stone-100 px-4 md:hidden">
       <div class="flex items-center justify-between">
@@ -91,6 +92,7 @@
         </div>
       </div>
     </section>
+
     <!-- Header Section (Web) -->
     <header
       class="sticky inset-x-0 top-0 z-30 mb-8 hidden h-30 items-center bg-stone-50 shadow-[0_4px_14px_0_rgba(0,0,0,0.08)] md:flex"
@@ -166,6 +168,7 @@
         </div>
       </nav>
     </header>
+
     <!-- Content -->
     <main
       class="mb-10 grid grid-cols-12 md:grid-rows-[80px_minmax(500px,_1fr)] md:gap-x-4 md:px-4 2xl:mx-auto 2xl:max-w-screen-2xl"
@@ -175,7 +178,7 @@
         class="col-span-4 row-span-2 hidden md:block lg:col-span-3 xl:col-span-2"
       >
         <div
-          class="top-38 sticky max-h-[calc(100vh_-_192px)] overflow-y-auto rounded-xl bg-stone-50 p-4"
+          class="sticky top-38 max-h-[calc(100vh_-_192px)] overflow-y-auto rounded-xl bg-stone-50 p-4"
         >
           <!-- Category -->
           <div class="mb-7">
@@ -990,9 +993,12 @@
       </section>
     </main>
 
+    <!-- Footer Section (Web) -->
+    <footer></footer>
+
     <!-- Footer Section (Mobile) -->
     <footer
-      class="rounded-t-md bg-stone-50 shadow-[0_-4px_8px_0_rgba(0,0,0,0.1)] md:hidden"
+      class="fixed inset-x-0 bottom-0 z-40 rounded-t-md bg-stone-50 shadow-[0_-4px_8px_0_rgba(0,0,0,0.1)] md:hidden"
     >
       <div
         x-data="{option:4}"
