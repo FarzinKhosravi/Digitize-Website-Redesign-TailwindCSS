@@ -628,8 +628,11 @@
       <section
         class="container col-span-8 mb-7 hidden rounded-md bg-stone-50 md:block lg:col-span-9 xl:col-span-10"
       >
-        <div class="p-2">
-          <ul class="flex items-center justify-start gap-x-4">
+        <div>
+          <ul
+            x-data="{tab:1}"
+            class="flex items-center justify-start gap-x-3 px-4"
+          >
             <li class="rounded-md bg-orange-100 p-2">
               <span class="text-orange-600">
                 <svg
@@ -646,37 +649,58 @@
                 </svg>
               </span>
             </li>
-            <li>
+            <li @click="tab = 1" class="relative">
               <a
-                class="py-2 text-base font-normal text-gray-300 xl:font-medium"
+                :class="tab ===1 ? 'text-slate-800 font-semibold' : ''"
+                class="py-3.4 block text-base font-normal text-gray-300"
                 href="#"
               >
                 محبوبترین
               </a>
+              <span
+                x-show="tab===1"
+                class="absolute left-0 top-2 inline-block h-2 w-2 rounded-full bg-orange-600"
+              ></span>
             </li>
-            <li>
+            <!-- *** -->
+            <li @click="tab = 2" class="relative">
               <a
-                class="py-2 text-base font-normal text-gray-300 xl:font-medium"
-                href="#"
-              >
-                گرانترین
-              </a>
-            </li>
-            <li>
-              <a
-                class="py-2 text-base font-normal text-gray-300 xl:font-medium"
-                href="#"
-              >
-                ارزانترین
-              </a>
-            </li>
-            <li>
-              <a
-                class="py-2 text-base font-normal text-gray-300 xl:font-medium"
+                :class="tab ===2 ? 'text-slate-800 font-semibold' : ''"
+                class="py-3.4 block text-base font-normal text-gray-300"
                 href="#"
               >
                 پربازدیدترین
               </a>
+              <span
+                x-show="tab===2"
+                class="absolute left-0 top-2 inline-block h-2 w-2 rounded-full bg-orange-600"
+              ></span>
+            </li>
+            <li @click="tab = 3" class="relative">
+              <a
+                :class="tab ===3 ? 'text-slate-800 font-semibold' : ''"
+                class="py-3.4 block text-base font-normal text-gray-300"
+                href="#"
+              >
+                گرانترین
+              </a>
+              <span
+                x-show="tab===3"
+                class="absolute left-0 top-2 inline-block h-2 w-2 rounded-full bg-orange-600"
+              ></span>
+            </li>
+            <li @click="tab = 4" class="relative">
+              <a
+                :class="tab ===4 ? 'text-slate-800 font-semibold' : ''"
+                class="py-3.4 block text-base font-normal text-gray-300"
+                href="#"
+              >
+                ارزانترین
+              </a>
+              <span
+                x-show="tab===4"
+                class="absolute left-0 top-2 inline-block h-2 w-2 rounded-full bg-orange-600"
+              ></span>
             </li>
           </ul>
         </div>

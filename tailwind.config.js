@@ -12,6 +12,7 @@ module.exports = {
       padding: {
         1.8: "0.45rem",
         4.5: "18px",
+        3.4: "0.85rem",
       },
       height: {
         30: "7.5rem",
