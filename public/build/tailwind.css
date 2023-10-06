@@ -1203,6 +1203,9 @@ select{
   .xl\:-mr-2{
     margin-right: -0.5rem;
   }
+  .xl\:-mr-3{
+    margin-right: -0.75rem;
+  }
   .xl\:block{
     display: block;
   }
