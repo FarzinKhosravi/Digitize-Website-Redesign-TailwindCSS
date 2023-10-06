@@ -1274,8 +1274,14 @@ select{
   .xl\:h-2{
     height: 0.5rem;
   }
+  .xl\:h-6{
+    height: 1.5rem;
+  }
   .xl\:w-2{
     width: 0.5rem;
+  }
+  .xl\:w-6{
+    width: 1.5rem;
   }
   .xl\:max-w-3xl{
     max-width: 48rem;
