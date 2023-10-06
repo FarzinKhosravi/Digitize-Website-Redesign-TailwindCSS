@@ -688,316 +688,123 @@
       >
         <!-- Products Box -->
         <div
+          x-data="{
+          products : [
+          {id:1, title:'ساعت هوشمند اپل سری ۸', price : '۳۲,۳۵۰,۸۹۰ تومان'},
+          {id:2, title:'ساعت هوشمند اپل سری ۴', price : '۱۲,۲۵۴,۸۹۰ تومان'},
+          {id:3, title:'ساعت هوشمند اپل سری ۵', price : '۱۲,۱۵۴,۸۹۰ تومان'},
+          {id:4, title:'ساعت هوشمند اپل سری ۹', price : '۱۳,۳۵۴,۸۹۰ تومان'},
+          {id:5, title:'ساعت هوشمند اپل سری ۳', price : '۱۲,۳۵۴,۸۹۰ تومان'},
+          {id:6, title:'ساعت هوشمند اپل سری ۲', price : '۱۵,۳۵۴,۸۹۰ تومان'},
+          ]}"
           class="container mx-auto grid grid-cols-2 gap-x-3 gap-y-8 p-4 md:p-0 lg:grid-cols-3 xl:grid-cols-4"
         >
           <!-- Product Box -->
-          <div
-            class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
-          >
+          <template x-for="product in products" key="product.id">
             <div
-              class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
+              class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
             >
-              <img
-                class=""
-                src="../src/assets/images/00.png"
-                alt="product-img"
-              />
-            </div>
-            <div class="mb-3 flex items-center justify-between">
-              <div>
-                <span class="text-xs font-medium text-slate-300 sm:text-sm">
-                  اپل
+              <div
+                class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
+              >
+                <img
+                  class=""
+                  src="../src/assets/images/00.png"
+                  alt="product-img"
+                />
+              </div>
+              <div class="mb-3 flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-medium text-slate-300 sm:text-sm">
+                    اپل
+                  </span>
+                </div>
+                <div
+                  x-data="{color:1}"
+                  class="flex w-full items-center justify-end"
+                >
+                  <span
+                    @click="color = 1"
+                    :class="color=== 1 ? 'ring-2 ring-yellow-400' : ''"
+                    class="relative z-10 -ml-1 inline-flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      x-show="color === 1"
+                      class="h-3 w-3 text-white sm:h-4 sm:w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    @click="color = 2"
+                    :class="color=== 2 ? 'ring-2 ring-orange-600' : ''"
+                    class="relative z-0 -ml-1 inline-flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      x-show="color === 2"
+                      class="h-3 w-3 text-white sm:h-4 sm:w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    @click="color = 3"
+                    :class="color=== 3 ? 'ring-2 ring-slate-500' : ''"
+                    class="inline-flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      x-show="color === 3"
+                      class="h-3 w-3 text-white sm:h-4 sm:w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="mb-2">
+                <span
+                  x-text="product.title"
+                  class="text-xxs font-bold text-slate-900 sm:text-base"
+                ></span>
+              </div>
+              <div class="mb-3 text-center">
+                <span
+                  x-text="product.price"
+                  class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
+                >
                 </span>
               </div>
-              <div class="flex w-full items-center justify-end">
-                <span
-                  class="relative z-10 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="relative z-0 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="inline-block h-6 w-6 rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
-                ></span>
+              <hr class="mb-2" />
+              <div class="flex items-center justify-center pb-2">
+                <button
+                  class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
+                >
+                  مشاهده و سفارش
+                </button>
               </div>
             </div>
-            <div class="mb-2">
-              <span class="text-xxs font-bold text-slate-900 sm:text-base"
-                >ساعت هوشمند اپل سری ٣</span
-              >
-            </div>
-            <div class="mb-3 text-center">
-              <span
-                class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
-              >
-                ۱۲,۳۵۰,۸۹۰ تومان
-              </span>
-            </div>
-            <hr class="mb-2" />
-            <div class="flex items-center justify-center pb-2">
-              <button
-                class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
-              >
-                مشاهده و سفارش
-              </button>
-            </div>
-          </div>
-          <!-- *** -->
-          <div
-            class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
-          >
-            <div
-              class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
-            >
-              <img
-                class=""
-                src="../src/assets/images/00.png"
-                alt="product-img"
-              />
-            </div>
-            <div class="mb-3 flex items-center justify-between">
-              <div>
-                <span class="text-xs font-medium text-slate-300 sm:text-sm">
-                  اپل
-                </span>
-              </div>
-              <div class="flex w-full items-center justify-end">
-                <span
-                  class="relative z-10 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="relative z-0 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="inline-block h-6 w-6 rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
-                ></span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <span class="text-xxs font-bold text-slate-900 sm:text-base"
-                >ساعت هوشمند اپل سری ٣</span
-              >
-            </div>
-            <div class="mb-3 text-center">
-              <span
-                class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
-              >
-                ۱۲,۳۵۰,۸۹۰ تومان
-              </span>
-            </div>
-            <hr class="mb-2" />
-            <div class="flex items-center justify-center pb-2">
-              <button
-                class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
-              >
-                مشاهده و سفارش
-              </button>
-            </div>
-          </div>
-          <div
-            class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
-          >
-            <div
-              class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
-            >
-              <img
-                class=""
-                src="../src/assets/images/00.png"
-                alt="product-img"
-              />
-            </div>
-            <div class="mb-3 flex items-center justify-between">
-              <div>
-                <span class="text-xs font-medium text-slate-300 sm:text-sm">
-                  اپل
-                </span>
-              </div>
-              <div class="flex w-full items-center justify-end">
-                <span
-                  class="relative z-10 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="relative z-0 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="inline-block h-6 w-6 rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
-                ></span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <span class="text-xxs font-bold text-slate-900 sm:text-base"
-                >ساعت هوشمند اپل سری ٣</span
-              >
-            </div>
-            <div class="mb-3 text-center">
-              <span
-                class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
-              >
-                ۱۲,۳۵۰,۸۹۰ تومان
-              </span>
-            </div>
-            <hr class="mb-2" />
-            <div class="flex items-center justify-center pb-2">
-              <button
-                class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
-              >
-                مشاهده و سفارش
-              </button>
-            </div>
-          </div>
-          <div
-            class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
-          >
-            <div
-              class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
-            >
-              <img
-                class=""
-                src="../src/assets/images/00.png"
-                alt="product-img"
-              />
-            </div>
-            <div class="mb-3 flex items-center justify-between">
-              <div>
-                <span class="text-xs font-medium text-slate-300 sm:text-sm">
-                  اپل
-                </span>
-              </div>
-              <div class="flex w-full items-center justify-end">
-                <span
-                  class="relative z-10 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="relative z-0 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="inline-block h-6 w-6 rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
-                ></span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <span class="text-xxs font-bold text-slate-900 sm:text-base"
-                >ساعت هوشمند اپل سری ٣</span
-              >
-            </div>
-            <div class="mb-3 text-center">
-              <span
-                class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
-              >
-                ۱۲,۳۵۰,۸۹۰ تومان
-              </span>
-            </div>
-            <hr class="mb-2" />
-            <div class="flex items-center justify-center pb-2">
-              <button
-                class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
-              >
-                مشاهده و سفارش
-              </button>
-            </div>
-          </div>
-          <div
-            class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
-          >
-            <div
-              class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
-            >
-              <img
-                class=""
-                src="../src/assets/images/00.png"
-                alt="product-img"
-              />
-            </div>
-            <div class="mb-3 flex items-center justify-between">
-              <div>
-                <span class="text-xs font-medium text-slate-300 sm:text-sm">
-                  اپل
-                </span>
-              </div>
-              <div class="flex w-full items-center justify-end">
-                <span
-                  class="relative z-10 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="relative z-0 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="inline-block h-6 w-6 rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
-                ></span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <span class="text-xxs font-bold text-slate-900 sm:text-base"
-                >ساعت هوشمند اپل سری ٣</span
-              >
-            </div>
-            <div class="mb-3 text-center">
-              <span
-                class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
-              >
-                ۱۲,۳۵۰,۸۹۰ تومان
-              </span>
-            </div>
-            <hr class="mb-2" />
-            <div class="flex items-center justify-center pb-2">
-              <button
-                class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
-              >
-                مشاهده و سفارش
-              </button>
-            </div>
-          </div>
-          <div
-            class="flex flex-col rounded-xl bg-stone-50 p-1.8 shadow-[0_3.088px_6.176px_0_rgba(0,0,0,0.08)]"
-          >
-            <div
-              class="mb-5 flex items-center justify-center rounded-lg bg-slate-200 p-4"
-            >
-              <img
-                class=""
-                src="../src/assets/images/00.png"
-                alt="product-img"
-              />
-            </div>
-            <div class="mb-3 flex items-center justify-between">
-              <div>
-                <span class="text-xs font-medium text-slate-300 sm:text-sm">
-                  اپل
-                </span>
-              </div>
-              <div class="flex w-full items-center justify-end">
-                <span
-                  class="relative z-10 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-yellow-400 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="relative z-0 -ml-1 inline-block h-6 w-6 rounded-full border-2 border-white bg-orange-600 sm:h-8 sm:w-8"
-                ></span>
-                <span
-                  class="inline-block h-6 w-6 rounded-full border-2 border-slate-700 bg-slate-800 sm:h-8 sm:w-8"
-                ></span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <span class="text-xxs font-bold text-slate-900 sm:text-base"
-                >ساعت هوشمند اپل سری ٣</span
-              >
-            </div>
-            <div class="mb-3 text-center">
-              <span
-                class="text-sm font-medium text-orange-600 sm:text-base sm:font-semibold"
-              >
-                ۱۲,۳۵۰,۸۹۰ تومان
-              </span>
-            </div>
-            <hr class="mb-2" />
-            <div class="flex items-center justify-center pb-2">
-              <button
-                class="w-full py-2 text-sm font-bold text-orange-400 sm:text-base"
-              >
-                مشاهده و سفارش
-              </button>
-            </div>
-          </div>
+          </template>
         </div>
       </section>
     </main>
