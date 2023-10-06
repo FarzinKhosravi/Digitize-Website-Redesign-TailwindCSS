@@ -196,8 +196,11 @@
             >
               دسته بندی
             </h2>
-            <ul class="flex flex-col gap-y-4">
-              <li class="cursor-pointer hover:rounded-md hover:bg-slate-100">
+            <ul x-data="{category:1}" class="flex flex-col gap-y-4">
+              <li
+                @click="category = 1"
+                class="cursor-pointer hover:rounded-md hover:bg-slate-100"
+              >
                 <a class="inline-flex w-full items-center py-2" href="#">
                   <span>
                     <svg
@@ -230,12 +233,16 @@
                     </svg>
                   </span>
                   <span
+                    :class="category === 1 ? 'text-slate-800 font-semibold' : ''"
                     class="mr-2 text-base font-normal text-gray-300 xl:text-lg"
                     >تلفن همراه</span
                   >
                 </a>
               </li>
-              <li class="cursor-pointer hover:rounded-md hover:bg-slate-100">
+              <li
+                @click="category = 2"
+                class="cursor-pointer hover:rounded-md hover:bg-slate-100"
+              >
                 <a class="inline-flex w-full items-center py-2" href="#">
                   <span>
                     <svg
@@ -260,12 +267,16 @@
                     </svg>
                   </span>
                   <span
+                    :class="category === 2 ? 'text-slate-800 font-semibold' : ''"
                     class="mr-2 text-base font-normal text-gray-300 xl:text-lg"
                     >لپ تاپ</span
                   >
                 </a>
               </li>
-              <li class="cursor-pointer hover:rounded-md hover:bg-slate-100">
+              <li
+                @click="category = 3"
+                class="cursor-pointer hover:rounded-md hover:bg-slate-100"
+              >
                 <a class="inline-flex w-full items-center py-2" href="#">
                   <span>
                     <svg
@@ -298,6 +309,7 @@
                     </svg>
                   </span>
                   <span
+                    :class="category === 3 ? 'text-slate-800 font-semibold' : ''"
                     class="mr-2 text-base font-normal text-gray-300 xl:text-lg"
                     >ساعت هوشمند</span
                   >
@@ -720,6 +732,8 @@
           {id:4, title:'ساعت هوشمند اپل سری ۹', price : '۱۳,۳۵۴,۸۹۰ تومان'},
           {id:5, title:'ساعت هوشمند اپل سری ۳', price : '۱۲,۳۵۴,۸۹۰ تومان'},
           {id:6, title:'ساعت هوشمند اپل سری ۲', price : '۱۵,۳۵۴,۸۹۰ تومان'},
+          {id:7, title:'ساعت هوشمند اپل سری ۲', price : '۱۴,۳۵۴,۸۹۰ تومان'},
+          {id:8, title:'ساعت هوشمند اپل سری ۱', price : '۱۸,۳۵۴,۸۹۰ تومان'},
           ]}"
           class="container mx-auto grid grid-cols-2 gap-x-3 gap-y-8 p-4 md:p-0 lg:grid-cols-3 xl:grid-cols-4"
         >
