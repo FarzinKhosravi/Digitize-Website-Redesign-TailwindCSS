@@ -824,6 +824,9 @@ select{
 .h-8{
   height: 2rem;
 }
+.h-auto{
+  height: auto;
+}
 .max-h-\[calc\(100vh_-_192px\)\]{
   max-height: calc(100vh - 192px);
 }
@@ -844,6 +847,9 @@ select{
 }
 .w-full{
   width: 100%;
+}
+.w-16{
+  width: 4rem;
 }
 .max-w-sm{
   max-width: 24rem;
@@ -1072,10 +1078,6 @@ select{
 }
 .text-xxs{
   font-size: 0.7rem;
-}
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .font-bold{
   font-weight: 700;
