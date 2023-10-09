@@ -830,9 +830,6 @@ select{
 .max-h-\[calc\(100vh_-_192px\)\]{
   max-height: calc(100vh - 192px);
 }
-.max-h-80{
-  max-height: 20rem;
-}
 .w-16{
   width: 4rem;
 }
@@ -917,6 +914,10 @@ select{
 }
 .gap-y-8{
   row-gap: 2rem;
+}
+.gap-x-4{
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 .overflow-y-auto{
   overflow-y: auto;
@@ -1005,6 +1006,9 @@ select{
 .p-4{
   padding: 1rem;
 }
+.p-3{
+  padding: 0.75rem;
+}
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1033,13 +1037,13 @@ select{
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pb-2{
   padding-bottom: 0.5rem;
@@ -1331,9 +1335,6 @@ select{
   .lg\:mt-4{
     margin-top: 1rem;
   }
-  .lg\:max-h-\[calc\(100vh_-_80px\)\]{
-    max-height: calc(100vh - 80px);
-  }
   .lg\:max-h-80{
     max-height: 20rem;
   }
@@ -1442,39 +1443,6 @@ select{
   .\32xl\:mx-auto{
     margin-left: auto;
     margin-right: auto;
-  }
-  .\32xl\:max-h-\[calc\(100vh_-_80px\)\]{
-    max-height: calc(100vh - 80px);
-  }
-  .\32xl\:max-h-\[calc\(100vh_-_174px\)\]{
-    max-height: calc(100vh - 174px);
-  }
-  .\32xl\:max-h-3{
-    max-height: 0.75rem;
-  }
-  .\32xl\:max-h-screen{
-    max-height: 100vh;
-  }
-  .\32xl\:max-h-96{
-    max-height: 24rem;
-  }
-  .\32xl\:max-h-40{
-    max-height: 10rem;
-  }
-  .\32xl\:max-h-48{
-    max-height: 12rem;
-  }
-  .\32xl\:max-h-44{
-    max-height: 11rem;
-  }
-  .\32xl\:max-h-60{
-    max-height: 15rem;
-  }
-  .\32xl\:max-h-72{
-    max-height: 18rem;
-  }
-  .\32xl\:max-h-80{
-    max-height: 20rem;
   }
   .\32xl\:max-w-screen-2xl{
     max-width: 1536px;
