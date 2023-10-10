@@ -52,8 +52,8 @@
 
     <!-- Content -->
     <main class="px-4">
-      <section>
-        <div>
+      <section class="flex flex-col">
+        <div class="mb-9">
           <!-- Shopping Cart -->
           <div
             x-data="{
@@ -87,7 +87,7 @@
                     <div>
                       <span
                         x-text="product.price"
-                        class="text-xs font-semibold text-orange-600"
+                        class="text-xs font-medium text-orange-600"
                       ></span>
                     </div>
                   </div>
@@ -146,6 +146,28 @@
               </div>
             </template>
           </div>
+        </div>
+        <div
+          class="mb-20 flex justify-between gap-x-5 rounded-lg bg-stone-50 p-4 shadow"
+        >
+          <div>
+            <span class="mb-7 block text-base font-semibold text-slate-900"
+              >مجموع قیمت:</span
+            >
+            <span class="block text-base font-normal text-slate-800"
+              >کد تخفیف دارید؟</span
+            >
+          </div>
+          <div>
+            <span class="text-base font-semibold text-orange-600"
+              >۱۲,۲۵۴,۸۹۰ تومان</span
+            >
+          </div>
+        </div>
+        <div>
+          <button class="block w-full rounded-md bg-orange-600 p-4 text-white">
+            <span class="text-xl font-bold">ادامه فرآیند خرید</span>
+          </button>
         </div>
       </section>
     </main>
