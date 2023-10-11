@@ -1394,6 +1394,12 @@ select{
   .lg\:max-w-xl{
     max-width: 36rem;
   }
+  .lg\:max-w-screen-xl{
+    max-width: 1280px;
+  }
+  .lg\:max-w-screen-2xl{
+    max-width: 1536px;
+  }
   .lg\:flex-1{
     flex: 1 1 0%;
   }
@@ -1413,20 +1419,16 @@ select{
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
+  .lg\:gap-x-7{
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
   .lg\:gap-x-8{
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
   .lg\:gap-y-4{
     row-gap: 1rem;
-  }
-  .lg\:gap-x-2{
-    -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem;
-  }
-  .lg\:gap-x-7{
-    -moz-column-gap: 1.75rem;
-         column-gap: 1.75rem;
   }
   .lg\:px-5{
     padding-left: 1.25rem;
