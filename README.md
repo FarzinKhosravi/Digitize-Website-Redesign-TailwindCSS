@@ -1,10 +1,8 @@
 # Digitize Website Redesign Project
 
-## App Demo
+## App Preview
 
-<img src="./src/assets/images/ScreenShotProject-01.png">
-<img src="./src/assets/images/ScreenShotProject-02.png">
-<img src="./src/assets/images/ScreenShotProject-03.png">
+![preview](./src/assets/images/project-preview.gif)
 
 ---
 
