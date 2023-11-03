@@ -1,12 +1,12 @@
-# Digitize Website Redesign Project
+# Digitize Website Redesign Project 😍
 
-## App Preview
+## App Preview 📍
 
 ![preview](./src/assets/images/project-preview.gif)
 
 ---
 
-## Description
+## Description 📝
 
 This Project is a Redesign of the User Interface(UI) of the Digitize Website, which is Responsive in the Screen Sizes of Different Devices;
 
@@ -39,7 +39,7 @@ To get started with this project, follow these steps:
 - Add your own content and images.
 - Test the responsiveness on various devices and browsers.
 
-## Features
+## Features ✅
 
 - Creating a Shop Page (Products Page) (TailwindCSS Framework)
 - Creating a Single-Product Page (TailwindCSS Framework)
@@ -53,7 +53,7 @@ To get started with this project, follow these steps:
 
 - Fully Responsive for Mobile, Tablet, Laptop and Desktop.
 
-## Web Development Technologies
+## Web Development Technologies 🪄
 
 - HTML5 (Semantic HTML)
 - TailwindCSS (FlexBox & Grid Layout)
